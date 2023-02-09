@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas - Rectangle Draw</title>
+  <style>
+    canvas {
+      background-color: #eee;
+      width: 500px;
+      height: 300px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+  <canvas class ="canvas" width="600" height="400"> 캔버스 지원 안됨 </canvas>
+
+  <script>
+    //Canvas는 context객체를 이용하여 그림을 그릴 수 있다
+
+    const canvas = document.querySelector('.canvas');
+    const context = canvas.getContext('2d');
+    
+    context.fillRect(0, 0, 100, 100);
+
+    context.fillStyle = 'red';
+    //속이 꽉 찬 사각형을 그림
+    context.fillRect(50, 50, 100, 100);
+    //해당 부분을 지움(지우개로 지운 듯한 느낌)
+    context.clearRect(50, 50, 30, 30);
+    //사각형을 채우지 않고 테두리를 그림
+    context.strokeRect(100, 100, 100, 100);
+  </script>  
+ 
+</body>
+</html>
