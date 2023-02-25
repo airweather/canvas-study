@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas class ="canvas" width="600" height="400"> 캔버스 지원 안됨 </canvas>
+  
+  <script>
+    //beginPath
+    //moveTo
+    //lineTo
+    //closePath
+
+    const canvas = document.querySelector('.canvas');
+    const context = canvas.getContext('2d');
+
+    context.beginPath();
+    context.moveTo(100, 100);
+    context.lineTo(300, 200);
+
+    context.stroke();
+  </script>
+</body>
+</html>
