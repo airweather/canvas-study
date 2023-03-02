@@ -11,18 +11,26 @@
   
   <script>
     //beginPath
-    //moveTo
-    //lineTo
+    //arc
     //closePath
+
+    function toRadian(d) {
+      return d * Math.PI / 180;
+    }
 
     const canvas = document.querySelector('.canvas');
     const context = canvas.getContext('2d');
 
+    // 원의 중심 위치(X, Y), 반지름, 호의 시작각도, 끝나는 각도(라디안), boolean값(원을 그리는 방향이 시계방향인지 아닌지)
+    
     context.beginPath();
-    context.moveTo(100, 100);
-    context.lineTo(300, 200);
-    context.stroke();
-    context.closePath();
+    context.arc(300, 200, 50, 0, toRadian(150), false);
+    context.fill();
+    
+    context.beginPath();
+    context.arc(500, 100, 20, 0, toRadian(150), false);
+    context.fill();
+    // context.stroke();
     
   </script>
 </body>
